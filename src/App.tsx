@@ -25,6 +25,18 @@ export function App() {
       <h4 className="is-size-4 has-text-info">fouth heading</h4>
       <h5 className="is-size-5 has-text-dark">fifth heading</h5>
       <h6 className="is-size-6 has-text-warning">sixth heading</h6>
+
+      <br></br>
+
+      <p className="has-text-primary has-background-light">I'm primary text</p>
+      <p className="has-text-warning has-background-danger">I'm warning text</p>
+      <p className="has-text-danger-light">I'm danger text</p>
+      <p className="has-text-info">I'm info text</p>
+      <p className="has-text-success">I'm success text</p>
+      <p className="has-text-dark">I'm dark text</p>
+      <p className="has-text-light has-background-primary-dark">
+        I'm light text
+      </p>
     </>
   )
 }
