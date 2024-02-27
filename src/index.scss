@@ -1,3 +1,9 @@
+@import '../node_modules/bulma/sass/utilities/_all.sass';
+@import '../node_modules/bulma/sass/base/_all.sass';
+@import '../node_modules/bulma/sass/elements/button.sass';
+@import '../node_modules/bulma/sass/elements/title.sass';
+@import '../node_modules/bulma/sass/form/_all.sass';
+
 :root {
   font: 16px / 1 sans-serif;
 
@@ -10,6 +16,19 @@
   --sea: #5a9090;
   --sun: #d5562b;
   --tangerine: #f99d1b;
+
+  // Set your brand colors
+  $purple: #8a4d76;
+  $pink: #fa7c91;
+  $brown: #757763;
+  $beige-light: #d0d1cd;
+  $beige-lighter: #eff0eb;
+  // Update Bulma's global variables
+  $family-sans-serif: 'Nunito', sans-serif;
+  $primary: $purple;
+  $link: $pink;
+  // Update some of Bulma's component variables
+  $body-background-color: $beige-lighter;
 }
 
 html {

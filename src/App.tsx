@@ -11,6 +11,13 @@ export function App() {
         <button className="button is-dark">Dark</button>
         <button className="button is-black">Black</button>
       </nav>
+
+      <h1 className="title">Bulma</h1>
+      <div className="buttons">
+        <a className="button is-primary">Primary</a>
+        <a className="button is-link">Link</a>
+      </div>
+
       <div>Hello, World!!! </div>
       <h1 className="is-size-1 has-text-danger">first heading</h1>
       <h2 className="is-size-2 has-text-primary">second heading</h2>
