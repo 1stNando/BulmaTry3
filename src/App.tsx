@@ -23,7 +23,7 @@ export function App() {
         <div className="navbar-menu" id="nav-links">
           <div className="navbar-end">
             <a className="navbar-item">My Account</a>
-            <a className="navbar-item">Shopping Cart ()</a>
+            <a className="navbar-item">Shopping Cart</a>
           </div>
         </div>
       </nav>
