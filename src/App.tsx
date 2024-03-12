@@ -30,6 +30,18 @@ export function App() {
     })
   })
 
+  // modal
+  const signupButton = document.querySelector('#signup')
+  const modalBg = document.querySelector('.modal-background')
+  const modal = document.querySelector('.modal')
+
+  signupButton?.addEventListener('click', () => {
+    modal?.classList.add('is-active')
+  })
+  modalBg?.addEventListener('click', () => {
+    modal?.classList.remove('is-active')
+  })
+
   return (
     <>
       <nav className="navbar has-shadow is-white">
@@ -159,7 +171,9 @@ export function App() {
                     eveniet maiores dolore, sed iusto voluptatum.
                   </p>
                   <div className="has-text-centered">
-                    <button className="button mt-5 ">Sign Up</button>
+                    <button className="button mt-5" id="signup">
+                      Sign Up
+                    </button>
                   </div>
                 </div>
               </div>
@@ -233,6 +247,15 @@ export function App() {
           </div>
         </div>
       </section>
+
+      {/* modal */}
+      <div className="modal">
+        <div className="modal-background">
+          <div className="modal-content has-background-white py-5 px-5">
+            <h3 className="title mb-6">Join the Club</h3>
+          </div>
+        </div>
+      </div>
     </>
   )
 }
