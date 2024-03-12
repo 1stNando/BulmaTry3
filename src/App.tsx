@@ -107,11 +107,23 @@ export function App() {
               <img src="src/assets/product.png" className="px-6"></img>
             </div>
             <div className="column is-12-tablet is-4-desktop">
-              <div className="is-size-4 mb-4">$15.99</div>
+              <div className="is-size-4 mb-4">$10.95</div>
               <p className="mb-4">
                 First orlast paragraph? ipsum dolor sit amet consectetur
                 adipisicing elit.
               </p>
+              <form>
+                <div className="field">
+                  <div className="control mb-6">
+                    <div className="select is-dark">
+                      <select>
+                        <option>Small (250g)</option>
+                        <option>Large (500g)</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </form>
               <button className="button is-primary is-rounded">
                 Add to Cart
               </button>
@@ -253,6 +265,30 @@ export function App() {
         <div className="modal-background">
           <div className="modal-content has-background-white py-5 px-5">
             <h3 className="title mb-6">Join the Club</h3>
+            <form>
+              <div className="field">
+                <label className="label">Name</label>
+                <div className="control">
+                  <input type="text" className="input" placeholder="Name" />
+                </div>
+              </div>
+              <div className="field">
+                <label className="label">Email</label>
+                <div className="control">
+                  <input type="text" className="input" placeholder="Name" />
+                </div>
+              </div>
+              <div className="field">
+                {/* <div className="control">
+                  <label className="checkbox">
+                    <input type="checkbox">Remember me</input>
+                  </label>
+                </div> */}
+              </div>
+              <div className="mt-6 has-text-centered">
+                <button className="button is-warning">Sign Up</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
