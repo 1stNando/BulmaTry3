@@ -1,6 +1,35 @@
 import React from 'react'
 
 export function App() {
+  const burgerIcon = document.querySelector('#burger')
+  const navbarMenu = document.querySelector('#nav-links')
+
+  burgerIcon?.addEventListener('click', () => {
+    navbarMenu?.classList.toggle('is-active')
+  })
+
+  // tabs
+  const tabs = document.querySelectorAll('.tabs li')
+  const tabContentBoxex = document.querySelectorAll('#tab-content > div')
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      tabs.forEach((item) => item.classList.remove('is-active'))
+      tab.classList.add('is-active')
+
+      const target = tab.dataset.target
+      tabContentBoxex.forEach((box) => {
+        if (box.getAttribute('id') === target) {
+          box.classList.remove('is-hidden')
+        } else {
+          box.classList.add('is-hidden')
+        }
+        // wont work unless this console.log is on for some reason...
+        console.log(target)
+      })
+    })
+  })
+
   return (
     <>
       <nav className="navbar has-shadow is-white">
@@ -23,11 +52,12 @@ export function App() {
         <div className="navbar-menu" id="nav-links">
           <div className="navbar-end">
             <a className="navbar-item">My Account</a>
-            <a className="navbar-item">Shopping Cart</a>
+            <a className="navbar-item">Shopping Cart (0)</a>
           </div>
         </div>
       </nav>
 
+      {/* breadcrumbs */}
       <div className="section pt-4 pb-0">
         <nav className="breadcrumb has-arrow-separator">
           <ul className="container">
@@ -35,10 +65,10 @@ export function App() {
               <a className="has-text-grey">Coffee Ninja</a>
             </li>
             <li>
-              <a>Shop</a>
+              <a className="has-text-grey">Shop</a>
             </li>
-            <li className="is-active">
-              <a className="has-text-grey">Docker Dark Roast</a>
+            <li>
+              <a className="is-active">Docker Dark Roast</a>
             </li>
           </ul>
         </nav>
@@ -56,7 +86,7 @@ export function App() {
                 Dark Roast
               </h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Two ipsum dolores sit amet consectetur adipisicing elit.
                 Delectus possimus nam facilis esse laboriosam numquam eveniet
                 laborum est, perferendis natus labore.
               </p>
@@ -67,8 +97,9 @@ export function App() {
             <div className="column is-12-tablet is-4-desktop">
               <div className="is-size-4 mb-4">$15.99</div>
               <p className="mb-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
-                ipsum dolor sit, amet consectetur adipisicing elit.
+                First orlast paragraph? ipsum dolor sit amet consectetur
+                adipisicing elit. Lorem ipsum dolor sit, amet consectetur
+                adipisicing elit.
               </p>
             </div>
           </div>
@@ -79,26 +110,51 @@ export function App() {
         <div className="container">
           <div className="columns is-8 is-variable">
             <div className="column is-7-tablet">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aspernatur enim pariatur recusandae voluptatibus voluptatum.
-                Fuga praesentium mollitia officiis quo velit ab aliquam
-                adipisci,
-              </p>
+              {/* tabbed content */}
+              <div className="tabs is-boxed">
+                <ul>
+                  <li className="is-active" data-target="product-details">
+                    <a>Product Details</a>
+                  </li>
+                  <li data-target="delivery-information">
+                    <a>Delivery Information</a>
+                  </li>
+                </ul>
+              </div>
+              <div className="px-2" id="tab-content">
+                <div id="product-details">
+                  <h3 className="is-size-5 title">Product Details</h3>
+                  <p>
+                    Five ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptas ex sunt dolores officiis, sequi iure laudantium!
+                    Laudantium, tempora recusandae, asperiores amet voluptate
+                    accusamus eaque saepe, dolores magnam illo incidunt
+                    adipisci!
+                  </p>
+                </div>
+                <div id="delivery-information" className="is-hidden">
+                  <h3 className="is-size-5 title">Delivery Information</h3>
+                  <p>
+                    Six ipsum dolor sit amet consectetur adipisicing elit.
+                    Facilis, corporis perspiciatis? Ducimus, nobis repellat?
+                    Magni, qui quasi et labore architecto dolorem impedit est
+                    perferendis deleniti debitis, nobis, soluta itaque
+                    inventore!
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="colum is-5-tablet">
+            <div className="colum is-5-tablet pl-5">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
-                nisi. Non reiciendis enim possimus delectus eaque magnam quae
-                officia officiis, molestiae illum porro, qui odit, voluptatem
-                atque est repellendus dicta.
+                Lorem three ipsum dolor sit amet consectetur adipisicing elit.
+                Vitae, nisi. Non reiciendis enim possimus delectus eaque magnam
+                quae officia officiis, molestiae illum porro, qui odit,
+                voluptatem atque est repellendus dicta.
               </p>
             </div>
           </div>
         </div>
       </section>
-
-      <script src="index.tsx"></script>
     </>
   )
 }
