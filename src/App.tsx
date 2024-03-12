@@ -292,6 +292,13 @@ export function App() {
           </div>
         </div>
       </div>
+
+      {/* footer */}
+      <footer className="footer">
+        <div className="content has-text-centered">
+          <p>Copyright 2024</p>
+        </div>
+      </footer>
     </>
   )
 }
