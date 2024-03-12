@@ -144,13 +144,20 @@ export function App() {
                 </div>
               </div>
             </div>
-            <div className="colum is-5-tablet pl-5">
-              <p>
-                Lorem three ipsum dolor sit amet consectetur adipisicing elit.
-                Vitae, nisi. Non reiciendis enim possimus delectus eaque magnam
-                quae officia officiis, molestiae illum porro, qui odit,
-                voluptatem atque est repellendus dicta.
-              </p>
+            <div className="colum is-5-tablet">
+              <div className="message is-dark">
+                <div className="message-header">
+                  <p>Earn Points witht the Coffee Club</p>
+                </div>
+                <div className="message-body">
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Pariatur sint labore rem neque. Voluptas architecto sapiente
+                    facilis suscipit quisquam ex. Quis corporis assumenda ipsum
+                    eveniet maiores dolore, sed iusto voluptatum.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
