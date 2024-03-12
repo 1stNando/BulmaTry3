@@ -98,9 +98,11 @@ export function App() {
               <div className="is-size-4 mb-4">$15.99</div>
               <p className="mb-4">
                 First orlast paragraph? ipsum dolor sit amet consectetur
-                adipisicing elit. Lorem ipsum dolor sit, amet consectetur
                 adipisicing elit.
               </p>
+              <button className="button is-primary is-rounded">
+                Add to Cart
+              </button>
             </div>
           </div>
         </div>
@@ -156,6 +158,9 @@ export function App() {
                     facilis suscipit quisquam ex. Quis corporis assumenda ipsum
                     eveniet maiores dolore, sed iusto voluptatum.
                   </p>
+                  <div className="has-text-centered">
+                    <button className="button mt-5 ">Sign Up</button>
+                  </div>
                 </div>
               </div>
             </div>
